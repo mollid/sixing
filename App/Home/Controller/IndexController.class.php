@@ -37,4 +37,11 @@ class IndexController extends HomeCommonController
         $this->display();
 
     }
+
+    public function about(){
+      $this->display();
+    }
+    public function service(){
+      $this->display(); 
+    }
 }

@@ -103,27 +103,14 @@
 							</div>
 						</li>
 						</yang:piclist>
-						
+
 					</ul>
 				</div>
 			</div>
 			<!--咨询end-->
 		</div>
 
-		<div class="footer w100">
-			<div class="foot_top max-w">
-				<img src="__PUBLIC__/images/foot1.png" class="foot_Leftimg">
-				<marquee direction="left">
-					<yang:announcelist limit='1' >
-						{$announcelist.title}
-					</yang:announcelist>
-					
-				</marquee> 
-				<a href="#0"><img src="__PUBLIC__/images/foot2.png" class="foot_Rightimg"></a>
-				<a href="http://wpa.qq.com/msgrd?v=3&uin={$qq}&site=qq&menu=yes" class="foot_btn">立即咨询</a>
-			</div>
-			<div class="foot_bottom t_a w100"><yang:copyright /></div>
-		</div>
+		<include file='Public:footer' />
 	</body>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -137,14 +124,14 @@
 				$(".header").fadeOut(100);
 			}
 			});
-			
+
 			$(".Spokesman_list>ul>li:odd").find(".Spokesman_img").css({"float":"right","margin-right":"30px"});
 			$(".Spokesman_list>ul>li:even").find(".Spokesman_img").css({"float":"left","margin-right":"30px"});
 			$(".Spokesman_list>ul>li:odd").find(".Spokesman_info").css({"float":"left"});
 			$(".Spokesman_list>ul>li:odd").find(".Spokesman_info").find('h2').css({"text-align":"right"});
 			$(".Spokesman_list>ul>li:even").find(".Spokesman_info").css({"float":"left"});
-			
-			
+
+
 		})
 
 		$(function(){

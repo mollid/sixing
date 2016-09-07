@@ -11,7 +11,7 @@
 .xyh_online_view .msg { height:36px; line-height:36px; text-align: center;}
 .xyh_online_view .msg a:link, .xyh_online_view .msg a:visited{ display:block; color:#ff6600; text-decoration:none;}
 .xyh_online_view .ico_zx{background: url(images/kfqq_s.png) no-repeat 2px 0px;padding-left: 25px; margin: 0px; display: block;}
-.xyh_online_view .ico_tel {background: url(images/kfqq_s.png) no-repeat 0px -110px;padding-left: 15px;margin: 0px; display: block; text-align: center; table-layout:fixed; word-break: break-all; overflow:hidden;}
+.xyh_online_view .ico_tel {background: url(images/kfqq_s.png) no-repeat 0px -110px;padding-left: 11px;margin: 0px; display: block; text-align: center; table-layout:fixed; word-break: break-all; overflow:hidden;}
 .xyh_online_view .qq{text-align: center;}
 .xyh_online_view .qq a{display:block;margin:6px 0px 0px 0px;}
 .xyh_online_view dd.noborder { border:none;}
