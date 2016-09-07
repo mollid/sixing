@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>思行教育机构</title>
+		<link rel="shortcut icon" href="__PUBLIC__/images/sx.png">
+		<link rel="stylesheet" href="__PUBLIC__/css/comm.css" />
+		<link rel="stylesheet" href="__PUBLIC__/css/owl.transitions.css" />
+		<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/owl.carousel.min.js" ></script>
+	</head>
+
+	<body>
+		<include file="Public:header"/>
+
+		<div class="main">
+			<div class="bg_banner w100">
+				<div class="main_nav min-w t_a">
+					<a href="#">
+						<img src="__PUBLIC__/images/main_jg.png">
+					</a>
+					<a href="#">
+						<img src="__PUBLIC__/images/main_fw.png">
+					</a>
+					<a href="#">
+						<img src="__PUBLIC__/images/main_hd.png">
+					</a>
+					<a href="#">
+						<img src="__PUBLIC__/images/main_jop.png">
+					</a>
+				</div>
+			</div>
+			<!--banner_end-->
+			<div class="w100 Price_consulting clear hidden">
+				<div class="min-w Price_consulting_main">
+					<h1 class="t_a"><img src="__PUBLIC__/images/title_1.png"></h1>
+				</div>
+				<div class="Price_consulting_list min-w">
+					<ul>
+						<li>
+							<div class="Price_list_box">
+								<img src="__PUBLIC__/images/Price1.jpg" width="243" height="243">
+								<em></em>
+								<a href="http://wpa.qq.com/msgrd?v=3&uin={$qq}&site=qq&menu=yes">立即咨询</a>
+							</div>
+							<h3 class="t_a">位置咨询</h3>
+						</li>
+						<li>
+							<div class="Price_list_box">
+								<img src="__PUBLIC__/images/Price2.jpg" width="243" height="243">
+								<em></em>
+								<a href="http://wpa.qq.com/msgrd?v=3&uin={$qq}&site=qq&menu=yes">立即咨询</a>
+							</div>
+							<h3 class="t_a">价格咨询</h3>
+						</li>
+						<li>
+							<div class="Price_list_box">
+								<img src="__PUBLIC__/images/Price3.jpg" width="243" height="243">
+								<em></em>
+								<a href="http://wpa.qq.com/msgrd?v=3&uin={$qq}&site=qq&menu=yes">立即咨询</a>
+							</div>
+							<h3 class="t_a">位置咨询</h3>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--咨询end-->
+			<div class="w100 Price_consulting clear hidden bottom_padding" style="background: url(__PUBLIC__/images/bg-2.jpg) center no-repeat;">
+				<div class="min-w Price_consulting_main">
+					<h1 class="t_a"><img src="__PUBLIC__/images/title_2.png"></h1>
+				</div>
+				<yang:block name='index_si'/>
+			</div>
+			<!--咨询end-->
+			<div class="w100 Price_consulting clear hidden bottom_padding">
+				<div class="min-w Price_consulting_main">
+					<h1 class="t_a"><img src="__PUBLIC__/images/title_3.png"></h1>
+				</div>
+				<div class="min-w">
+						<div id="purpose" class="owl-carousel">
+						<yang:abc id='3' limit=''>
+							<a class="item">{$abc.content}</a>
+						</yang:abc>
+						</div>
+				</div>
+			</div>
+			<!--咨询end-->
+			<div class="w100 Price_consulting clear hidden bottom_padding" style="background: url(__PUBLIC__/images/bg-3.jpg) center no-repeat; margin-bottom: 0;">
+				<div class="min-w Price_consulting_main">
+					<h1 class="t_a"><img src="__PUBLIC__/images/title_4.png"></h1>
+				</div>
+				<div class="Spokesman_list min-w">
+					<ul>
+						<yang:piclist typeid='15'>
+						<li>
+							<div class="Spokesman_img"><img src="{$piclist.litpic}"></div>
+							<div class="Spokesman_info">
+								<h2>{$piclist.title}</h2>
+								<div class="Spokesman_txt">
+									{$piclist.description}
+								</div>
+							</div>
+						</li>
+						</yang:piclist>
+						
+					</ul>
+				</div>
+			</div>
+			<!--咨询end-->
+		</div>
+
+		<div class="footer w100">
+			<div class="foot_top max-w">
+				<img src="__PUBLIC__/images/foot1.png" class="foot_Leftimg">
+				<marquee direction="left">
+					<yang:announcelist limit='1' >
+						{$announcelist.title}
+					</yang:announcelist>
+					
+				</marquee> 
+				<a href="#0"><img src="__PUBLIC__/images/foot2.png" class="foot_Rightimg"></a>
+				<a href="http://wpa.qq.com/msgrd?v=3&uin={$qq}&site=qq&menu=yes" class="foot_btn">立即咨询</a>
+			</div>
+			<div class="foot_bottom t_a w100"><yang:copyright /></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".header").hide();
+			$(".Price_consulting_list ul li:nth-child(2)").css('margin',"0 42px");
+			$(window).scroll(function() {
+
+			if($(document).scrollTop() > 200) {
+				$(".header").fadeIn(300);
+			} else {
+				$(".header").fadeOut(100);
+			}
+			});
+			
+			$(".Spokesman_list>ul>li:odd").find(".Spokesman_img").css({"float":"right","margin-right":"30px"});
+			$(".Spokesman_list>ul>li:even").find(".Spokesman_img").css({"float":"left","margin-right":"30px"});
+			$(".Spokesman_list>ul>li:odd").find(".Spokesman_info").css({"float":"left"});
+			$(".Spokesman_list>ul>li:odd").find(".Spokesman_info").find('h2').css({"text-align":"right"});
+			$(".Spokesman_list>ul>li:even").find(".Spokesman_info").css({"float":"left"});
+			
+			
+		})
+
+		$(function(){
+		    $('#purpose').owlCarousel({
+		        items: 1,
+		        navigation: true,
+		        autoPlay: true,
+		        pagination:false,
+		        navigationText: ["<img src='__PUBLIC__/images/left.png'>","<img src='__PUBLIC__/images/right.png'>"],
+		    });
+		});
+	</script>
+
+</html>
