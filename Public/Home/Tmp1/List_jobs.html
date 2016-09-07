@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>招聘信息</title>
+    <link rel="shortcut icon" href="__PUBLIC__/images/sx.png">
+    <link rel="stylesheet" href="__PUBLIC__/css/comm.css" />
+    <link rel="stylesheet" href="__PUBLIC__/css/owl.transitions.css" />
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/owl.carousel.min.js" ></script>
+</head>
+<body>
+
+<include file="Public:header"/>
+
+<div class="comm_banner w100" style="background:url(__PUBLIC__/images/comm_banner_job.jpg) center no-repeat;"></div>
+
+<div class="main">
+    <div class="comm_main w100 hidden" style="min-height: 500px;">
+        <div class="min-w">
+            <div class="comm_title t_a clear">
+                <h1>招聘信息</h1>
+                <h5>Recruitment information</h5>
+            </div>
+            <div class="jobs">
+                <!--描述-->
+                <ul>
+                    <yang:artlist  typeid="$cid" pagesize='15' fieldflag='1' >
+                    <li>
+                        <div class="job_L fl">{$artlist.title}</div>
+                        <div class="job_R fl">
+                            <h1>招聘要求</h1>
+                            <div class="job_txt">
+                                {$artlist.content}
+                            </div>
+                        </div>
+                    </li>
+                    </yang:artlist >
+                </ul>
+                <!--描述-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<include file="Public:footer"/>
+</body>
+</html>

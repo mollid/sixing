@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>近期活动</title>
+    <link rel="shortcut icon" href="__PUBLIC__/images/sx.png">
+    <link rel="stylesheet" href="__PUBLIC__/css/comm.css" />
+    <link rel="stylesheet" href="__PUBLIC__/css/owl.transitions.css" />
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/owl.carousel.min.js" ></script>
+</head>
+<body>
+
+<include file="Public:header"/>
+
+<div class="comm_banner w100" style="background:url(__PUBLIC__/images/comm_banner_news.jpg) center no-repeat;"></div>
+
+<div class="main">
+    <div class="comm_main w100 hidden" style="min-height: 500px;">
+        <div class="min-w">
+            <div class="comm_title t_a clear">
+                <h1>近期活动</h1>
+                <h5>Recent activities</h5>
+            </div>
+            <div class="news_list">
+                <!--描述-->
+                <ul class="news_list_ul">
+                    <yang:artlist  typeid="$cid" pagesize='15' fieldflag='1' >
+                        <li>
+                            <a href="{$artlist.url}">
+                                <div class="news_time fl">
+                                    <h2>{$artlist.publishtime|date='m-d',###}</h2>
+                                    <h5>{$artlist.publishtime|date='Y',###}</h5>
+                                </div>
+                                <div class="new_txt fl">
+                                    <div class="news-title cut">{$artlist.title}</div>
+                                    <div class="clear cut new_text">{$artlist.description}</div>
+                                </div>
+                            </a>
+                        </li>
+                    </yang:artlist >
+                </ul>
+                <!--描述-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<include file="Public:footer"/>
+</body>
+</html>
