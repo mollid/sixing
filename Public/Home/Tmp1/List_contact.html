@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>招聘信息</title>
+    <link rel="shortcut icon" href="__PUBLIC__/images/sx.png">
+    <link rel="stylesheet" href="__PUBLIC__/css/comm.css" />
+    <link rel="stylesheet" href="__PUBLIC__/css/owl.transitions.css" />
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/owl.carousel.min.js" ></script>
+</head>
+<body>
+
+<include file="Public:header"/>
+
+<div class="comm_banner w100" style="background:url(__PUBLIC__/images/comm_banner_contact.jpg) center no-repeat;"></div>
+
+<div class="main">
+    <div class="comm_main w100 hidden" style="min-height: 500px;">
+        <div class="min-w">
+            <div class="comm_title t_a clear">
+              <h1>联系我们</h1>
+              <h5>Contact us</h5>
+            </div>
+            <div class="contact hidden fl">
+  						<div class="contact_box fl">
+  							<div class="contact_titile t_a">
+  								<h1>请留下您的联系方式</h1>
+  								<h4>Please leave your contact information</h4>
+  							</div>
+  							<div class="contact_list">
+  								<form method='post' id="form_do" name="form_do" action="<yang:gbookaddurl />">
+  								<ul>
+  									<li class="margin_bottom10">
+  										<div class="contact_list_L fl">姓名</div>
+  										<div class="contact_list_R fl"><input type="text" name="username" class="input_style" maxlength="10" placeholder="请填写你的姓名"></div>
+  									</li>
+  									<li class="margin_bottom10">
+  										<div class="contact_list_L fl">手机/电话</div>
+  										<div class="contact_list_R fl"><input type="text"  name="tel" class="input_style"  maxlength="11" placeholder="请填写你的手机或电话"></div>
+  									</li>
+  									<li class="margin_bottom10">
+  										<div class="contact_list_L fl">留言内容</div>
+  										<div class="contact_list_R fl"><textarea  class="input_style"  name="content"   placeholder="请填写您要留言的内容，尽量控制在300字左右。"></textarea></div>
+  									</li>
+                    <if condition="C('CFG_VERIFY_GUESTBOOK') eq 1">
+                		<li>
+                			<div class="contact_list_L fl">验证码</div>
+                			<div class="contact_list_R fl">
+                				<input type="text" name="vcode"class="input_style"  /><img src="<yang:vcodeurl />" id="VCode" onclick="javascript:changeVcode(this);" />
+                			</div>
+                		</li>
+                		</if>
+  									<li>
+  										<div class="contact_list_L fl"> </div>
+  										<div class="contact_list_R fl">
+  											<input type="submit" value="提交" class="fl">
+  											<input type="reset" class="fl" value="重置" style="margin-left: 50px;">
+  										</div>
+  									</li>
+  								</ul>
+                  <script type="text/javascript">
+                  function changeVcode(obj){
+                  	$("#VCode").attr("src",'<yang:vcodeurl />'+ '#'+Math.random());
+                  	return false;
+                  }
+                  </script>
+  								</form>
+  							</div>
+  						</div>
+
+  						<div class="contact_box fl">
+  							<div class="contact_titile t_a">
+  								<h1>我们的联系方式</h1>
+  								<h4>Our contact information</h4>
+  							</div>
+  							<div class="contact_list">
+  								<form>
+  								<ul>
+  									<li>
+  										<div class="contact_list_L fl">机构名称:</div>
+  										<div class="contact_list_R fl"><yang:sitename /></div>
+  									</li>
+  									<li>
+  										<div class="contact_list_L fl">网址：</div>
+  										<div class="contact_list_R fl"><a href="http://<yang:siteurl />" target="_blank"> <yang:siteurl /></a></div>
+  									</li>
+  									<li>
+  										<div class="contact_list_L fl">电话：</div>
+  										<div class="contact_list_R fl"><yang:phone /></div>
+  									</li>
+  									<li>
+  										<div class="contact_list_L fl">地址：</div>
+  										<div class="contact_list_R fl"><yang:address /></div>
+  									</li>
+  								</ul>
+  								</form>
+  							</div>
+  						</div>
+
+  					</div>
+        </div>
+    </div>
+</div>
+
+<include file="Public:footer"/>
+</body>
+</html>
