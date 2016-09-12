@@ -1,0 +1,20 @@
+.mui-banner{ background-size:auto 300px; -webkit-background-size:auto 300px;background-position:center; height:300px;}
+.indx-box{ margin: 20px auto;}
+.Ensure_list{ overflow: hidden;}
+.Ensure_list ul{padding: 0; margin-bottom: 0;}
+.Ensure_list ul li{width:23%;list-style: none;display: inline-block; margin:auto 1%;padding: 0;}
+.Ensure_list ul li a img{ width: 100%;}
+hr{border-bottom: 1px dotted #ccc;border-top: 0;margin:5px auto;}
+.mui-Service_L{height: 42px; width: 42px; float: left; font-size: 24px;color: #00A0E9;}
+.nobefore:before,.nobefore:after{display: none;}
+.word-wrap{ word-wrap: break-word;white-space: normal !important;}
+.mui-comm-litle{ margin: 20px auto;}
+.mui-comm-text img{max-width: 100%; font-size: 14px;color: #555555;}
+.mui-comm-text{line-height: 1.5;}
+.mui-ellipsis-1 {display: -webkit-box;overflow: hidden;white-space: normal !important;text-overflow: ellipsis;word-wrap: break-word;-webkit-line-clamp: 1;-webkit-box-orient: vertical;}
+.jos_div{font-size: 14px;margin-top: 0;margin-bottom: 10px;color: #8f8f94; padding-left: 15px;}
+.color-bllue{color: #00A0E9;}
+.mui-width-30{width: 28%; margin:auto 1%;}
+.mui-width-40{width: 38%; margin:auto 1%;}
+.mui-width-60{width: 58%; margin:auto 1%;}
+.mui-width-70{width: 68%; margin:auto 1%;}
