@@ -2,7 +2,8 @@
 .indx-box{ margin: 20px auto;}
 .Ensure_list{ overflow: hidden;}
 .Ensure_list ul{padding: 0; margin-bottom: 0;}
-.Ensure_list ul li{width:23%;list-style: none;display: inline-block; margin:auto 1%;padding: 0;}
+/*.Ensure_list ul li{width:23%;list-style: none;display: inline-block; margin:auto 1%;padding: 0;}*/
+.Ensure_list ul li{padding: 1%;display: table-cell;overflow: hidden;height: 50px;text-align: center;vertical-align: middle;white-space: nowrap;text-overflow: ellipsis;}
 .Ensure_list ul li a img{ width: 100%;}
 hr{border-bottom: 1px dotted #ccc;border-top: 0;margin:5px auto;}
 .mui-Service_L{height: 42px; width: 42px; float: left; font-size: 24px;color: #00A0E9;}

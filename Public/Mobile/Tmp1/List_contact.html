@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title><yang:sitetitle /></title>
+    <script src="__PUBLIC__/js/mui.js"></script>
+    <link href="__PUBLIC__/css/mui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__PUBLIC__/css/style.css" />
+    <script type="text/javascript" charset="utf-8">
+      mui.init();
+    </script>
+	</head>
+
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 菜单容器 -->
+			<include file="Public:header"/>
+
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a href="#off_nav_left" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+					<h1 class="mui-title">思行教育</h1>
+				</header>
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+							<div class="mui-comm-litle mui-text-center ">
+								<h3 class="mui-content-padded">联系我们</h3>
+								<h5>Contact us</h5></div>
+							<div class="mui-content-padded mui-comm-text">
+								<!--内容-->
+								<h4 class="mui-table-view-divider">我们的联系方式</h4>
+
+								<ul class="mui-table-view nobefore">
+								  <li class="mui-table-view-cell">
+								   <div class="mui-width-30 mui-pull-left">机构：</div>
+								   <div class="mui-width-70 mui-pull-left"><yang:sitename /></div>
+								  </li>
+								   <li class="mui-table-view-cell">
+								   <div class="mui-width-30 mui-pull-left">网址：</div>
+								   <div class="mui-width-70 mui-pull-left"><a href="http://<yang:siteurl />" target="_blank"> <yang:siteurl /></a></div>
+								  </li>
+								   <li class="mui-table-view-cell">
+								   <div class="mui-width-30 mui-pull-left">电话：</div>
+								   <div class="mui-width-70 mui-pull-left"><yang:phone /></div>
+								  </li>
+								  </li>
+								   <li class="mui-table-view-cell">
+								   <div class="mui-width-30 mui-pull-left">地址：</div>
+								   <div class="mui-width-70 mui-pull-left"><yang:address /></div>
+								  </li>
+								</ul>
+
+
+								<h4 class="mui-table-view-divider">请留下您的联系方式</h4>
+								<form class="mui-input-group nobefore" method='post' id="form_do" name="form_do" action="<yang:gbookaddurl />">
+									<div class="mui-input-row">
+										<label>姓名：</label>
+										<input type="text"  name="username" placeholder="请填写你的姓名" class="mui-input-clear">
+									</div>
+									<div class="mui-input-row">
+										<label>电话：</label>
+										<input type="text"  name="tel" class="mui-input-clear" placeholder="请填写你的联系电话">
+									</div>
+									<div class="mui-input-row" style="height: 125px;">
+										<label>内容：</label>
+										<textarea rows="5" name="content" placeholder="请填写您要留言的内容，尽量控制在300字左右。"></textarea>
+
+									</div>
+
+                  <div class="mui-input-row">
+
+										<label>验证码</label>
+                    <input type="text"  name="vcode" class="mui-input-clear" placeholder="请输入验证码">
+
+									</div>
+                  <img src="<yang:vcodeurl />" id="VCode"/>
+									<div class="mui-button-row">
+										<input  type="submit" class="mui-btn mui-btn-primary" value="提交">&nbsp;&nbsp;
+										<input type="reset" class="mui-btn mui-btn-primary" value="重置">
+									</div>
+								</form>
+
+							</div>
+						<!-- 主界面具体展示内容 -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script>
+			mui('.mui-scroll-wrapper').scroll({
+				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+			});
+			mui('body').on('tap','a',function(){document.location.href=this.href;});
+      mui('body').on("tap",'#VCode',function(){
+        mui(this)[0].src = '<yang:vcodeurl />'+ '#'+Math.random();
+        // mui(this).attr("src",'<yang:vcodeurl />'+ '#'+Math.random());
+      });
+		</script>
+	</body>
+
+</html>
